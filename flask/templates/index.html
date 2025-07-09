@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Flask Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Hero Section -->
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron bg-primary text-white p-5 rounded">
+                <h1 class="display-4">Welcome to Flask Portfolio</h1>
+                <p class="lead">A modular Flask application with dynamic module loading.</p>
+                {% if not session.get('user_id') %}
+                    <a class="btn btn-light btn-lg" href="{{ url_for('user_login.login') }}" role="button">Get Started</a>
+                {% else %}
+                    <p class="mb-0">Welcome back, {{ session.get('user_id') }}!</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h2 class="text-center mb-4">Features</h2>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Modular Architecture</h5>
+                    <p class="card-text">Built with Flask blueprints for easy module management and scalability.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">User Authentication</h5>
+                    <p class="card-text">Secure login system with session management.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Responsive Design</h5>
+                    <p class="card-text">Mobile-first design using Bootstrap 5 for all devices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Application Status</h3>
+                </div>
+                <div class="card-body">
+                    <p><strong>Loaded Modules:</strong></p>
+                    <ul>
+                        <li>user_login - Authentication module</li>
+                        <!-- More modules will appear here as they're added -->
+                    </ul>
+                    <p class="text-muted">Add more modules by updating the modules_to_load list in app.py</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
