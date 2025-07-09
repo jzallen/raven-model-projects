@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from config import Config
 
+
 def create_app(modules=[]):
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -15,6 +16,7 @@ def create_app(modules=[]):
         return render_template('index.html')
 
     return app
+
 
 # Example of composing app with selected modules
 if __name__ == '__main__':

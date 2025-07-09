@@ -1,5 +1,33 @@
 # raven-model-projects
 
+## Projects
+
+### Flask Portfolio Application
+
+A modular Flask web application demonstrating best practices for scalable web development.
+
+**Location**: `flask/`
+
+**Features**:
+- Modular architecture with Flask blueprints
+- Dynamic module loading system
+- User authentication with sessions
+- Responsive Bootstrap 5 UI
+- Custom CSS styling and JavaScript interactions
+
+**Quick Start**:
+```bash
+cd flask
+pip install -r requirements.txt
+python app.py
+```
+
+Visit `http://127.0.0.1:5000` and login with:
+- Username: `admin`
+- Password: `password`
+
+See `flask/README.md` for detailed documentation.
+
 ## Development Environment
 
 This project is configured to work seamlessly with Gitpod, providing a cloud-based development environment that's ready to use in seconds.

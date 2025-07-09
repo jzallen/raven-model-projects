@@ -1,10 +1,10 @@
 // Main JavaScript file for Flask Portfolio
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Auto-hide alerts after 5 seconds
     const alerts = document.querySelectorAll('.alert');
-    alerts.forEach(function(alert) {
-        setTimeout(function() {
+    alerts.forEach(function (alert) {
+        setTimeout(function () {
             const bsAlert = new bootstrap.Alert(alert);
             bsAlert.close();
         }, 5000);
@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add loading state to forms
     const forms = document.querySelectorAll('form');
-    forms.forEach(function(form) {
-        form.addEventListener('submit', function() {
+    forms.forEach(function (form) {
+        form.addEventListener('submit', function () {
             const submitBtn = form.querySelector('button[type="submit"]');
             if (submitBtn) {
                 submitBtn.disabled = true;
